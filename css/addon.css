@@ -1,0 +1,14 @@
+.subposts {
+  padding: 0 0 0 1em;
+  color: DimGray;
+}
+
+UL.subposts {
+  list-style-type: none;
+}
+
+.posts .explaination {
+  color: DimGray;
+  font-size: 90%;
+  padding: 0 0 0 1.5em;
+}

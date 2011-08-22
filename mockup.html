@@ -1,0 +1,202 @@
+<html>
+<head>
+<title>Mockup for GKING/Zelig</title>
+
+<style>
+body { font-family: helvetica; font-size: 90%; }
+#wrapper {
+margin: 0 auto; 
+width: 800px; 
+border-style: solid;
+border-width: 1px;
+border-color: black;
+padding: 2em;
+}
+
+.indent {
+  margin-left: .7em;
+}
+
+
+.title {
+  font-size: 115%; font-weight: bold;
+  border-width: 0 0 0 0;
+  border-color: black; 
+  border-style: solid; 
+}
+
+.explaination {
+  font-size: 95%;
+  color: gray;
+}
+
+li {
+  font-size: 95%;
+}
+
+li .explaination {
+  padding: 0 0 .6em 0;
+}
+
+.smaller {
+  font-size: 95%;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="wrapper">
+<h1>Zelig</h1>
+
+
+
+<div>
+  <div class="title">Zelig</div>
+  <div class="explaination">
+    Zelig is a single, easy-to-use program that can estimate, help
+    interpret, and present the results of a large range of statistical
+    methods. It literally is "everyone's statistical software" because
+    Zelig uses (R) code from many researchers. We also hope it will become
+    "everyone's statistical software" for applications, and we have
+    designed it so that anyone can use it or add their methods to
+    it. Zelig comes with detailed, self-contained documentation that
+    minimizes startup costs for Zelig and R, automates graphics and
+    summaries for all models, and, with only three simple commands
+    required, generally makes the power of R accessible for all
+    users. Zelig also works well for teaching, and is designed so that
+    scholars can use the same program with students that they use for
+    their research.
+  </div>
+  <div class="links">
+    <ul>
+      <li><a href="#">Installation</a> and <a href="#">Documentation</a></li>
+      <li>Developers' Guide for Implementing New Zelig Models</li>
+      <li>
+        A paper that describes the advances underlying Zelig software:
+        Kosuke Imai, Gary King, and Olivia Lau. "Toward A Common Framework for 
+        Statistical Analysis and Development" Journal of Computational and 
+        Graphical Statistics, Vol. 17, No. 4 (December), pp. 892-913 
+        (Abstract: <a href="http://gking.harvard.edu/files/abs/z-abs.shtml">HTML</a> 
+        | Paper: <a href="http://gking.harvard.edu/files/z.pdf">PDF</a>)
+      </li>
+    </ul>
+  </div>
+</div>
+
+<hr size="1px" color="gray" />
+
+<div>
+  <div class="title">Zelig Add-on Packages</div>
+  <div class="explaination">
+    <p>
+    Zelig version 4 has added support for a modular programming style. This
+    allows end-users to download Zelig add-ons that add functionality
+    specifically catered to their programming needs, as well as provide
+    contributors of Zelig to independently manage and statistical models
+    without direct intervention from the Zelig core team.
+    </p>
+    <p>
+    For more information on contributing statistical packages to Zelig, please
+    consult Zelig's <a href="DEVDOC">Developers' Documentation</a> or
+    contact core developers via the <a href="mailto:zelig@lists.gking.harvard.edu">
+      Zelig mailing list</a>.
+    </p>
+    <p>
+    A collection of Haravard-maintained Zelig packages is available on 
+    <a href="https://github.com/zeligdev">here</a> at GitHub.
+    </p>
+  </div>
+  <div>
+    <ul>
+      <!-- Bivariate Regerssion  -->
+      <li><div>
+        Bivariate Regressions (<a href="https://github.com/zeligdev/bivariate.zelig">Git Repository</a>)
+        <div class="explaination">
+          Adds support for bivariate logistic and probit regressions with added plotting functionality to
+          appropriately describe regression information through contour plotting.
+        </div>
+      </div></li>
+
+      <!-- Generalized Additive Models -->
+      <li><div>
+        Generalized Additive Models (GAM) Regressions (<a href="https://github.com/zeligdev/gam.zelig">Git Repository</a>)
+        <div class="explaination">
+          Adds support for Generalized Additive Models (GAM) regressions as well as API support for describing smoothing functions. Specifically,
+          this package contains GAM analogs of the common generalized linear models: logit, normal, poisson and probit.
+        </div>
+      </div></li>
+
+      <!-- General Estimating Equations  -->
+      <li><div>
+	  Generalized Estimating Equations (GEE) Regressions (<a href="https://github.com/zeligdev/gee.zelig">Git Repository</a>)
+          <div class="explaination">
+            Adds support fpr Generalized Estimating Equations (GEE) regressions. Specifically, this package contains GEE analogs of the common
+            generalized linear models: gamma, logit, normal, poisson and probit.
+          </div>
+      </div></li>
+
+      <!-- Mixed Effect -->
+      <li><div>
+	  Mixed Effect Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
+          <div class="explaination">
+            Add support for Mixed Effect regressions (also commonly referred to as Multilevel). Specifically, this package contains Mixed-effect
+            analogs of the common generalized linear models: gamma, logit, ls, poisson and probit.
+          </div>
+      </div></li>
+
+      <!-- Multinomial -->
+      <li><div>
+        Multinomial Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
+        <div class="explaination">
+          Adds support for two multinomial logit and probit regressions. No plotting support is currently available (due to the difficulty in 
+          visually representing data in 3 or more dimensions).
+        </div>
+      </div></li>
+
+      <!-- Ordinal -->
+      <li><div>
+	  Ordinal Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
+          <div class="explaination">
+            Adds support for ordinal logit and probit regressions. Additinally, this package contains useful plotting facilities for 
+            visually describing ordered quantities of interest of ordered choices.
+          </div>
+      </div></li>
+
+      <!-- Survey-Weighted  -->
+      <li><div>
+        Survey-Weighted Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
+        <div class="explaination">
+          Adds support for survey-weighted regressions. Specifically, this package contains survey-weighted analogs of the common
+          generalized linear models: gamma, logit, normal, poisson and probit.
+        </div>
+      </div></li>
+    </ul>
+
+    </ul>
+
+  </div>
+  
+</div>
+
+<hr size="1px" color="gray" />
+
+<div>
+  <div class="title">Information</div>
+  <div class="explaination">
+    The following comprises a directory of information and Zelig-related resources:
+
+  </div>
+  <div>
+    <ul>
+      <li><a href="http://people.iq.harvard.edu/~mowen/repo/">Repository location</a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
