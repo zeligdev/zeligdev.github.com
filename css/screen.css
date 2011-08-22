@@ -66,6 +66,12 @@ ul.posts {
     line-height: 1.75em;
   }
 
+  ul.posts li:before {
+    content: "\00BB";
+    padding-right: 10px;
+  }
+
+
   ul.posts span {
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
