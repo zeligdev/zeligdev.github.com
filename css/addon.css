@@ -12,3 +12,12 @@ UL.subposts {
   font-size: 90%;
   padding: 0 0 0 1.5em;
 }
+
+.zelig4code {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: Gray;
+  padding: .5em;
+  margin: 0 .5em;
+  display: inline;
+}

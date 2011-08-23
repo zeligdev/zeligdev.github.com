@@ -34,14 +34,14 @@
     <h1> What's new in Zelig 4 </h1>
     <ul class = "posts">
       <li> Separation of zelig core from contributed models </li>
-      <li> Simplified interface for integrating external models with Zelig </li>
+      <li> <tt>zelig2</tt> methods support an all-new, simplfied programming style </li>
+      <li> <tt>param</tt> methods support a sleeker, more formalized programming style </li>
+      <li> <tt>describe</tt> methods now run with less overhead </li>
       <li> Package construction wizard (<tt>zelig.skeleton</tt>) </li>
-      <li> New hook API allows adding functionality without entire code rewrites </li>
-      <li> Parameter simulation has been formalized </li>
-      <li> Reduced complexity of model citations </li>
+      <li> Brand new hook API allows developer's more control within zelig's core functionality </li>
       <li> An improved toolkit for rapid development of new Zelig models </li>
       <li> Integrated numerical and combinatorial math libraries </li>
-      <li> Roxygen-compliant documentation </li>
+      <li> <a href="http://roxygen.org/">Roxygen</a>-compliant documentation </li>
       <li> And more... </li>
     </ul>
 
@@ -60,14 +60,14 @@
     <ul class="posts">
       <li> Follow the <a href="#$">installation guide</a> ,</li>
       <li> Download the latest build and install following the <a href="#">R Installation and Administration</a> Guide, or </li>
-      <li> Type <pre>source("http://gking.harvard.edu/zelig/install.R")</pre> from with an R terminal </li>
+      <li> Type <tt class="zelig4code">source("http://bit.ly/install_zelig")</tt> from within an R terminal </li>
     </ul>
 
-    <h1> Documentation </h1>
+    <!-- <h1> Documentation </h1>
 
     <ul class="posts">
       <li></li>
-    </ul>
+    </ul> -->
 
     <h1>Models already ported (by package)</h1>
 
@@ -75,60 +75,70 @@
 
       <!-- Bivariate Regerssion  -->
       <li>
-        Bivariate Regressions (<a href="https://github.com/zeligdev/bivariate.zelig">[code]</a> 
-                               <a href="https://github.com/zeligdev/bivariate.zelig">[issue queue]</a>)
-        <div class="explaination">
-          Adds support for bivariate logistic and probit regressions with added plotting functionality to
-          appropriately describe regression information through contour plotting.
-      </div></li>
+      Bivariate Regressions
+      <small>
+        (<a href="https://github.com/zeligdev/bivariate.zelig">Code</a>,
+        <a href="https://github.com/zeligdev/bivariate.zelig/issues">Issue Queue</a>)
+      </small>
+      <div class="explaination">Models: blogit, bprobit</div>
+      </li>
 
       <!-- Generalized Additive Models -->
       <li>
-        Generalized Additive Models (GAM) Regressions (<a href="https://github.com/zeligdev/gam.zelig">Git Repository</a>)
-        <div class="explaination">
-          Adds support for Generalized Additive Models (GAM) regressions as well as API support for describing smoothing functions. Specifically,
-          this package contains GAM analogs of the common generalized linear models: logit, normal, poisson and probit.
-      </div></li>
+      Generalized Additive Models (GAM) Regressions
+      <small>
+        (<a href="https://github.com/zeligdev/gam.zelig">Code</a>,
+        <a href="https://github.com/zeligdev/gam.zelig/issues">Issue Queue</a>)
+      </small>
+      <div class="explaination">Models: logit.gam, normal.gam, poisson.gam, probit.gam</div>
+      </li>
 
       <!-- General Estimating Equations  -->
       <li>
-	  Generalized Estimating Equations (GEE) Regressions (<a href="https://github.com/zeligdev/gee.zelig">Git Repository</a>)
-          <div class="explaination">
-            Adds support fpr Generalized Estimating Equations (GEE) regressions. Specifically, this package contains GEE analogs of the common
-            generalized linear models: gamma, logit, normal, poisson and probit.
-      </div></li>
+      Generalized Estimating Equations (GEE) Regressions
+      <small>
+        (<a href="https://github.com/zeligdev/gee.zelig">Code</a>,
+        <a href="https://github.com/zeligdev/gee.zelig/issues">Issue Queue</a>)
+      </small>
+      <div class="explaination">Models: gamma.gee, logit.gee, normal.gee, poisson.gee, probit.gee</div>
+      </li>
 
       <!-- Mixed Effect -->
       <li>
-	  Mixed Effect Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
-          <div class="explaination">
-            Add support for Mixed Effect regressions (also commonly referred to as Multilevel). Specifically, this package contains Mixed-effect
-            analogs of the common generalized linear models: gamma, logit, ls, poisson and probit.
-      </div></li>
+      Mixed Effect Regressions
+      <small>
+        (<a href="https://github.com/zeligdev/Mixed-Zelig">Code</a>,
+        <a href="https://github.com/zeligdev/Mixed-Zelig/issues">Issue Queue</a>)
+      </small>
+      <div class="explaination">Models: gamma.mixed, logit.mixed, ls.mixed, poisson.mixed, probit.mixed</div></li>
 
       <!-- Multinomial -->
       <li>
-        Multinomial Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
-        <div class="explaination">
-          Adds support for two multinomial logit and probit regressions. No plotting support is currently available (due to the difficulty in 
-          visually representing data in 3 or more dimensions).
-      </div></li>
+      Multinomial Regressions 
+      <small>
+        (<a href="https://github.com/zeligdev/multivariate.zelig">Code</a>,
+        <a href="https://github.com/zeligdev/multivariate.zelig/issues">Issue Queue</a>)
+      </small>
+      <div class="explaination">Models: mlogit, mprobit</div>
+      </li>
 
       <!-- Ordinal -->
       <li>
-	  Ordinal Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
-          <div class="explaination">
-            Adds support for ordinal logit and probit regressions. Additinally, this package contains useful plotting facilities for 
-            visually describing ordered quantities of interest of ordered choices.
-      </div></li>
+      Ordinal Regressions 
+      <small>
+        (<a href="https://github.com/zeligdev/zelig.ordinal">Code</a>,
+        <a href="https://github.com/zeligdev/zelig.ordinal/issues">Issue Queue</a>)   
+      </small>
+      <div class="explaination">Models: ologit, oprobit</div></li>
 
       <!-- Survey-Weighted  -->
       <li>
-        Survey-Weighted Regressions (<a href="https://github.com/zeligdev/Mixed-Zelig">Git Repository</a>)
-        <div class="explaination">
-          Adds support for survey-weighted regressions. Specifically, this package contains survey-weighted analogs of the common
-          generalized linear models: gamma, logit, normal, poisson and probit.
-      </div></li>
+      Survey-Weighted Regressions
+      <small>
+        (<a href="https://github.com/zeligdev/Survey-Zelig">Code</a>,
+        <a href="https://github.com/zeligdev/Survey-Zelig/issues">Issue Queue</a>)
+      </small>
+      <div class="explaination">Models: gamma.survey, logit.survey, normal.survey, poisson.survey, probit.survey</div></li>
     </ul>
 
   </div>
