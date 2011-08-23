@@ -17,7 +17,14 @@ UL.subposts {
   border-style: dashed;
   border-width: 1px;
   border-color: Gray;
-  padding: .5em;
-  margin: 0 .5em;
-  display: inline;
+  margin: .25em .5em;
+  padding: .25em;
+}
+
+.grayed {
+  color: DimGray;
+}
+
+.verticalmargins {
+  margin: 0 .25em;
 }
