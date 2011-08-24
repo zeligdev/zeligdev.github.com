@@ -1,60 +1,102 @@
 #!/bin/sh
 
-
-# * Pull changes from 
-
-
-
-SCRIPT="writeLines(paste(version\$major, version\$minor, sep='.'))"
-VERSION=`echo $SCRIPT | /usr/bin/R --vanilla --slave | sed -e "s/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\1.\2/g"`
-
-SRCPATH="src/contrib"
-
-# move tar.gz
-#mv *.tar.gz $SRCPATH
-
-
-# Define PACKAGES and PACKAGES.gz scripts
-SRCSCRIPT="setwd('$SRCPATH'); tools:::write_PACKAGES()"
-
-# Execute R Script
-#echo $SRCSCRIPT | /usr/bin/R --vanilla --slave
-
-
-
-
-
-
-
+#
 FILENAME="REPOSITORIES"
 DEST="dest"
-#
-#
+SRCPATH="src/contrib"
+
+LOG=update_repo.log
+
+# this script generates PACKAGES and PACKAGES.gz files
+VERSION_SCRIPT="writeLines(paste(version\$major, version\$minor, sep='.'))"
+PACKAGES_SCRIPT="setwd('$DEST'); tools:::write_PACKAGES()"
+
+
+function log {
+  local DATE=$(date -jn "+[%H:%M:%S %D]")
+  if [ $2 ]
+  then
+    echo $DATE "$1" >> $2
+  else
+    echo $DATE "$1"
+  fi
+}
+
+
+# Get R's version number
+VERSION=$(echo $VERSION_SCRIPT | /usr/bin/R --vanilla --slave | sed -e "s/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\1.\2/g")
+
+if [ -d TMP ]
+then
+  log "removing TMP directory" $LOG
+  rm -fr TMP
+fi
+
+
+# git-clone from all watched git repositories
+# build them in R
+# 
 while read LINE
 do
+  log "$LINE" $LOG
 
-  # git-pull
+  # git-clone
   git clone $LINE TMP
+
+  # error-catching for git clone
+  if [ $? != 0 ]
+  then
+    log " * git clone failed" $LOG
+    log " * not attempting an R build" $LOG
+    echo >> $LOG
+    continue
+  else
+    log " * git clone succeed" $LOG
+  fi
+
+  echo
 
   # Build with R
   R CMD build TMP
 
+  # error-catching for R CMD build
+  if [ $? != 0 ]
+  then
+    log " * R Build failed" $LOG
+  else
+    log " * R build succeed" $LOG
+  fi
+
   # clean-up
-  rm -fr TMP
+  if [ -d TMP ]
+  then
+    log " * removing TMP" $LOG
+    rm -fr TMP
+  fi
+
+  # aesthetics
+  echo
+  echo >> $LOG
 
 done < $FILENAME
 
-#
-#
-rm -fr $DEST
-mkdir $DEST
+exit
 
-#
-#
-for FILE in *.tar.gz
-do
-  mv -f $FILE $DEST
-done
 
-# setwd as $DEST
-#
+# Make destination directory if it doesn't exist
+if [ ! -d $DEST ]
+then
+  log "making destination folder: $DEST" $LOG
+  mkdir $DEST
+fi
+
+
+# Move files to destination
+mv -f *.tar.gz $DEST
+
+
+# Execute R Script
+echo $PACKAGES_SCRIPT | /usr/bin/R --vanilla --slave
+
+
+echo "\n\n" >> $LOG
