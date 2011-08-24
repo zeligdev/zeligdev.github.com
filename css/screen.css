@@ -95,10 +95,10 @@ ul.posts {
 .title {
   color: #a00;
   font-weight: bold;
-  margin-bottom: 2em;
 }
 
   .site .title a {
+    font-size: 200%;
     color: #a00;
     text-decoration: none;
   }
@@ -107,11 +107,15 @@ ul.posts {
     color: black;
   }
 
-  .site .title a.extra {
-    color: #aaa;
-    text-decoration: none;
-    margin-left: 1em;
-  }
+
+.site .subtitle {
+  margin-bottom: 2em;
+}
+.site .subtitle a{
+   color: #aaa;
+   text-decoration: none;
+}
+
 
   .site .title a.extra:hover {
     color: black;
