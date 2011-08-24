@@ -1,0 +1,8 @@
+The Zelig 4 Developers' Page
+============================
+contains:
+* a singular html page announcing Zelig 4
+* css files controlling the style of the page
+* documentation files referenced from the Zelig 4 page
+* (temporarily) zeligbuild, a tool used to clone, package, include in an R
+  repository, and update the PACKAGES
