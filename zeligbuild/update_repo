@@ -23,8 +23,16 @@ function log {
 }
 
 
+
 # Get R's version number
 VERSION=$(echo $VERSION_SCRIPT | /usr/bin/R --vanilla --slave | sed -e "s/\([0-9]*\)\.\([0-9]*\)\.\([0-9]*\)/\1.\2/g")
+
+echo "\n\n" >> $LOG
+
+echo "Zelig starting up on $(date)" >> $LOG
+echo " * R version $VERSION" >> $LOG
+echo " * $(git --version)" >> $LOG
+echo >> $LOG
 
 if [ -d TMP ]
 then
@@ -79,9 +87,6 @@ do
   echo >> $LOG
 
 done < $FILENAME
-
-exit
-
 
 # Make destination directory if it doesn't exist
 if [ ! -d $DEST ]
