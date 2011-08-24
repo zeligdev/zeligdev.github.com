@@ -99,6 +99,7 @@ ul.posts {
 }
 
   .site .title a {
+    font-size: 200%;
     color: #a00;
     text-decoration: none;
   }
