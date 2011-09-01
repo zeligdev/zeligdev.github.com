@@ -1,3 +1,8 @@
+.short-description {
+  color: DimGray;
+  margin: .5em 0;
+}
+
 .subposts {
   padding: 0 0 0 1em;
   color: DimGray;
