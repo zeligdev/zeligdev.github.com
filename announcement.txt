@@ -55,4 +55,4 @@ Questions
 ---------
 
 For any particular questions on developing new Zelig models, please send all mail to:
-  http://lists.gking.harvard.edu/index.cgi?info=zelig
+  zelig@lists.gking.harvard.edu
