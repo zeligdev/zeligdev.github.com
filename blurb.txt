@@ -4,4 +4,4 @@ Zelig version 4 is currently in alpha. For details about the improvements made i
   http://zeligdev.github.com/
 
 or read the release announcement here:
-  http://zeligdev.github.com/announcement
+  http://zeligdev.github.com/announcement.txt
