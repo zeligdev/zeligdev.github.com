@@ -1,6 +1,5 @@
 all:
 
-
 update:
 	git pull origin master
 
