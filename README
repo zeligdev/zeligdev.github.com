@@ -1,6 +1,16 @@
 The Zelig 4 Developers' Page
-============================
-contains:
-* a singular html page announcing Zelig 4
-* css files controlling the style of the page
-* documentation files referenced from the Zelig 4 page
+
+Updating
+================================================================================
+
+To update and commit a change simply type:
+  make
+
+within the "zeligdev.github.com" directory.
+
+
+Contains
+================================================================================
+  * A singular html page announcing Zelig 4
+  * Css files controlling the style of the page
+  * Documentation files referenced from the Zelig 4 page
