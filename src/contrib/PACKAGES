@@ -1,0 +1,7 @@
+Package: Zelig
+Version: 4.0-4
+Depends: R (>= 2.8.1), MASS, iterators, survival, methods
+Suggests: mvtnorm, MCMCpack
+License: GPL (>= 2)
+MD5sum: 273395522a78b26389bfffa663300b0b
+
