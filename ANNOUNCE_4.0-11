@@ -1,0 +1,54 @@
+Zelig 4 is now on CRAN!
+
+Zelig 4 is out of alpha and downloadable from CRAN. This release marks
+a milestone in Zelig's goal to become "Everyone's Statistical
+Software." That is, Zelig 4 now caters to developers with a newly
+added programming API. Now, adding your statistical model to the
+Zelig software suite is easier than ever. This feature comes in
+addition to Zelig's goal to be a simple and powerful tool for
+researchers.
+
+Zelig 4 has left alpha, and is now downloable from CRAN. This release marks a
+milestone in Zelig's goal to become "Everyone's Statistical Software." Zelig 4
+now caters to developers with its newly added API. This allows any statistical
+model to leverage Zelig's interface as a means to simulate quantities of
+interest. Now Zelig is a tool for developers *and* researchers.
+
+For more information about the Zelig project, see:
+  http://projects.iq.harvard.edu/zelig
+
+
+- Find out what's new! -
+
+Zelig 4 comes with a myriad of changes from previous Zelig versions.
+
+More information on what's new can be found on the IQSS Zelig
+Project's page here:
+ http://projects.iq.harvard.edu/zelig/pages/whats-new
+
+
+- Contribute to Zelig -
+
+Developers can contribute to the Zelig project. Using
+the new developer API, any statistical package can be written to
+operate using Zelig's interface. To learn more about contributing to
+Zelig, visit the IQSS Zelig Project's page here:
+ http://projects.iq.harvard.edu/zelig/pages/whats-new
+
+The latest version of the source code can be found on GitHub:
+ https://github.com/zeligdev/Zelig
+
+
+- Install Zelig! -
+
+Instructions on installing Zelig 4 can be found on the IQSS Zelig
+Project's page here:
+ http://projects.iq.harvard.edu/zelig/software/zelig
+
+
+- Join the discussion! -
+
+Zelig 4 is now on Google Groups! Discuss Zelig development and issues
+on this forum. Additionally, the latest news, help, and bug fixes are
+all available here:
+ http://bit.ly/Rw717L
